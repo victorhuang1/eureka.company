@@ -244,8 +244,8 @@
         <div class='container'>
             <h3>Contact</h3>
             <p class='fw-lighter mt-3 mb-5'>A blog (a truncation of "weblog") is a discussion or informational website published on the World Wide Web consisting of discrete, often informal diary-style text entries (posts). Posts are typically displayed in reverse chronological order, so that the most recent post appears first, at the top of the web page. </p>
-            <div class='bg-info row'>
-                <div class='col-5'>
+            <div class='row'>
+                <div class='col-12 col-md-5 order-2 order-md-0 mt-4 mt-md-0'>
                     <h5>Send a email</h5>
                     <span class='fw-lighter'>A blog (a truncation of "weblog") is a discussion or informational website publis</span>
                     
@@ -261,8 +261,43 @@
                     <b>Office:</b>
                     <span class='fw-lighter'>Calgary,AB</span>
                 </div>
-                <div class='col-7'>
-                    <div class='container bg-blueblack p-5 shadow'></div>
+               
+                <div class='col-12 col-md-7 border shadow'>
+					<div class='row p-5'>
+						<div class='col-12 d-block d-md-none mb-4'>
+							<h5>Send a email</h5>
+							<span class='fw-light'>
+								Hello, nice to meet you here.
+							</span>
+						</div>
+						<div class='col-6'>
+							<label class='form-label fw-lighter' for='nameinput'>
+								First Name*
+							</label>
+							<input class='form-control' id='nameinput' placeholder="First Name*" />
+							<label class='form-label fw-lighter mt-4' for='emailinput'>
+								Email:
+							</label>
+							<input class='form-control' id='emailinput' placeholder="Email:" />
+						</div>
+						<div class='col-6'>
+							<label class='form-label fw-lighter' for='lastinput'>
+								Last Name*:
+							</label>
+							<input class='form-control' id='lastinput' placeholder="Last Name*" />
+							<label class='form-label fw-lighter mt-4' for='phoneinput'>
+								Phone Number:
+							</label>
+							<input class='form-control' id='phoneinput' placeholder="Phone Number" />
+						</div>
+						<div class='col-12 mt-4'>
+							<label class='form-label fw-lighter' for='mesinput'>
+								Message:
+							</label>
+							<textarea class='form-control' id='mesinput'></textarea>
+							<input type='button' value='Send' class='btn btn-dark mt-4' />
+						</div>
+					</div>
                 </div>
             </div>
            
