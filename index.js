@@ -36,6 +36,10 @@ app.get('/',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'pages/index.html'))
 })
 
+app.get('/blog01.html',(req,res)=>{
+    res.sendFile(path.resolve(__dirname,'pages/blog01.html'))
+})
+
 app.get('/about',(req,res)=>{
       res.sendFile(path.resolve(__dirname,'pages/about.html'))
 })
