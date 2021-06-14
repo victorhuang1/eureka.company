@@ -8,6 +8,8 @@ const contactPage = fs.readFileSync('contact.html')
 const notFoundPage = fs.readFileSync('404.html') */
 
 const express = require('express')
+const ejs = require('ejs')
+
 
 /* const server = http.createServer((req,res) => {
     if(req.url === '/about')
@@ -24,6 +26,8 @@ const express = require('express')
 server.listen(3000) */
 
 const app = new express();
+
+app.set('view engine','ejs')
 app.use(express.static('public'))
 app.listen(3000,()=>{
     console.log("App listening on port 3000")
@@ -33,7 +37,8 @@ app.get('/',(req,res)=>{
     /* res.json({
         name:"test"
     }) */
-    res.sendFile(path.resolve(__dirname,'pages/index.html'))
+    /* res.sendFile(path.resolve(__dirname,'pages/index.html')) */
+    res.render('index')
 })
 
 app.get('/blog01.html',(req,res)=>{
