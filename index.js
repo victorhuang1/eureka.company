@@ -42,7 +42,8 @@ app.get('/',(req,res)=>{
 })
 
 app.get('/blog01.html',(req,res)=>{
-    res.sendFile(path.resolve(__dirname,'pages/blog01.html'))
+    /* res.sendFile(path.resolve(__dirname,'pages/blog01.html')) */
+    res.render('blog01')
 })
 
 app.get('/about',(req,res)=>{

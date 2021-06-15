@@ -38,42 +38,7 @@
 	</head>
 	<body class='bg-light'>
 		<!-- nav start-->
-		<div class='container-fluid sticky-top px-0 shadow'>
-			<nav class='navbar navbar-expand-md navbar-dark bg-blueblack'>
-				<div class='container-fluid px-4'>
-					<a href="/" class='navbar-brand ms-4'>
-						Victor's Home
-					</a>
-					<button class='navbar-toggler' data-bs-toggle='collapse' data-bs-target='#slidernode'>
-						<span class='navbar-toggler-icon'></span>
-					</button>
-					<div class='collapse navbar-collapse' id='slidernode'>
-						<ul class='navbar-nav ms-auto me-4'>
-							<li class='nav-item text-center'>
-								<a href="index.html#bk" class='nav-link fw-lighter'>
-									Blog
-								</a>
-							</li>
-							<li class='nav-item text-center'>
-								<a href="index.html#jn" class='nav-link fw-lighter'>
-									Skill
-								</a>
-							</li>
-							<li class='nav-item text-center'>
-								<a href="index.html#gy" class='nav-link fw-lighter'>
-									About
-								</a>
-							</li>
-							<li class='nav-item text-center'>
-								<a href="index.html#lx" class='nav-link fw-lighter'>
-									Call
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</div>
+		<%- include('layouts/navbar');-%>
 		<!-- nav end-->
 		<!-- banner start-->
 		<div class='bg-image position-relative' style="background-image: url(image/overlay-bg.jpg); height: 300px;">
