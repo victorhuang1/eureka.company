@@ -10,6 +10,9 @@ const notFoundPage = fs.readFileSync('404.html') */
 const express = require('express')
 const ejs = require('ejs')
 
+const mongoose = require('mongoose')
+mongoose.connect('mongodb://localhost/my_database',{useNewParser:true})
+
 
 /* const server = http.createServer((req,res) => {
     if(req.url === '/about')
