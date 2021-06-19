@@ -55,20 +55,25 @@
         <h3 id='bk'>Blog</h3>
         <p class='fw-lighter mt-3'>A blog (a truncation of "weblog") is a discussion or informational website published on the World Wide Web consisting of discrete, often informal diary-style text entries (posts). Posts are typically displayed in reverse chronological order, so that the most recent post appears first, at the top of the web page. </p>
         <div class='row'>
+            <% for(var i=0;i<2;i++){ %>
             <div class='col-12 col-md-6'>
                 <a href="blog01.html" class='d-block text-decoration-none text-center'>
                     <img src='https://upload.wikimedia.org/wikipedia/en/5/51/Stormtrooper_%28Star_Wars%29.png' class='img-fluid rounded'>
                     <h5 class='mt-4'>
                         <span class='text-secondaryellow'>
-                            Skill development(Programmer)</span><span class='fw-normal'> - Why do some people keep changing jobs?
+                            Skill development(Programmer)
+                        </span>
+                        <span class='fw-normal'> 
+                            <%=blogposts[i].title%>
                         </span>
                     </h5>
                     <p class='fw-lighter'>
-                        Take you to understand the real programmer on the job when the bitter and tired.
+                        <%=blogposts[i].body%>>
                     </p>
                 </a>
             </div>
-            <div class='col-12 col-md-6'>
+            <% } %>
+            <!-- <div class='col-12 col-md-6'>
                 <a href="#"class='d-block text-decoration-none text-center'>
                     <img src='https://upload.wikimedia.org/wikipedia/en/5/51/Stormtrooper_%28Star_Wars%29.png' class='img-fluid rounded'>
                     <h5 class='mt-4'>
@@ -80,7 +85,7 @@
                         Take you to understand the real programmer on the job when the bitter and tired.
                     </p>
                 </a>
-            </div>
+            </div> -->
 
         </div>
     </div>

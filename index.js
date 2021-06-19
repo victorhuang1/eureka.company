@@ -10,7 +10,8 @@ const notFoundPage = fs.readFileSync('404.html') */
 const express = require('express')
 const ejs = require('ejs')
 
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+const BlogPost = require('./models/BlogPost');
 mongoose.connect('mongodb://localhost/my_database',{useNewParser:true})
 
 
@@ -36,19 +37,26 @@ app.listen(3000,()=>{
     console.log("App listening on port 3000")
 })
 
-app.get('/',(req,res)=>{
-    /* res.json({
-        name:"test"
-    }) */
-    /* res.sendFile(path.resolve(__dirname,'pages/index.html')) */
-    res.render('index')
+app.get('/',async(req,res)=>{
+    const blogposts = await BlogPost.find({})
+    res.render('index',{
+        blogposts
+    });
 })
+
+
+/* app.get('/',(req,res)=>{
+    
+    res.render('index')
+}) */
+
 
 app.get('/blog01.html',(req,res)=>{
     /* res.sendFile(path.resolve(__dirname,'pages/blog01.html')) */
     res.render('blog01')
 })
 
-app.get('/about',(req,res)=>{
+
+/* app.get('/about',(req,res)=>{
       res.sendFile(path.resolve(__dirname,'pages/about.html'))
-})
+}) */
