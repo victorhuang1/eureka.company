@@ -57,20 +57,22 @@
         <div class='row'>
             <% for(var i=0;i<2;i++){ %>
             <div class='col-12 col-md-6'>
-                <a href="<%=blogposts[i]._id%>" class='d-block text-decoration-none text-center'>
-                    <img src='https://upload.wikimedia.org/wikipedia/en/5/51/Stormtrooper_%28Star_Wars%29.png' class='img-fluid rounded'>
-                    <h5 class='mt-4'>
-                        <span class='text-secondaryellow'>
-                            Skill development(Programmer)
-                        </span>
-                        <span class='fw-normal'> 
-                            <%=blogposts[i].title%>
-                        </span>
-                    </h5>
-                    <p class='fw-lighter'>
-                        <%=blogposts[i].body%>>
-                    </p>
-                </a>
+                <div class='shadow bg-white p-5 mb-4'>
+                    <a href="<%=blogposts[i]._id%>" class='d-block text-decoration-none text-center'>
+                        <img src='<%= blogposts[i].image %>' class='img-fluid rounded'>
+                        <h5 class='mt-4'>
+                            <span class='text-secondaryellow'>
+                                Skill development(Programmer)
+                            </span>
+                            <span class='fw-normal'> 
+                                <%= blogposts[i].title %>
+                            </span>
+                        </h5>
+                        <p class='fw-lighter'>
+                            <%=blogposts[i].body.substring(0,300)+'...'%>
+                        </p>
+                    </a>
+                </div>
             </div>
             <% } %>
             <!-- <div class='col-12 col-md-6'>
@@ -91,7 +93,7 @@
     </div>
 
     <!-- skill start -->
-    <div class='container-fluid bg-white'>
+    <div class='container-fluid bg-white mb-5'>
         <div class='container'>
             <h3 id='jn'>Skills</h3>
             <p class='fw-lighter mt-3'>A blog (a truncation of "weblog") is a discussion or informational website published on the World Wide Web consisting of discrete, often informal diary-style text entries (posts). Posts are typically displayed in reverse chronological order, so that the most recent post appears first, at the top of the web page. </p>
@@ -191,15 +193,15 @@
 
             </div>
         </div>
-
-     </div>
+    </div>
+    <!-- skill end -->
 
     <!-- about start -->
     <div class='container'>
-        <div id='gy' class='p-4'></div>
+        <div id='gy' class='p-4 m-4'></div>
         <h3>About</h3>
         <p class='fw-lighter mt-3'>A blog (a truncation of "weblog") is a discussion or informational website published on the World Wide Web consisting of discrete, often informal diary-style text entries (posts). Posts are typically displayed in reverse chronological order, so that the most recent post appears first, at the top of the web page. </p>
-        <div class='row shadow border p-5 mt-5 bg-info'>
+        <div class='row shadow border p-5 my-5 bg-white'>
             <div class='col-md-3 col-12'>
                 <div class='text-center'>
                     <img src='https://upload.wikimedia.org/wikipedia/en/5/51/Stormtrooper_%28Star_Wars%29.png' class='rounded-3 img-fluid'>
@@ -220,6 +222,7 @@
             </div>
         </div>
     </div>
+    <!-- about end -->
 
     <!-- contact start -->
     <div class='container-fluid bg-white py-5'>
@@ -282,10 +285,9 @@
 					</div>
                 </div>
             </div>
-           
-                
         </div>  
     </div>
+    <!-- contact end -->
 
 
     <%- include('layouts/footer');-%>

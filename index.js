@@ -55,6 +55,7 @@ app.get('/:id',async(req,res)=>{
     res.render('blog01',{
         blogpost
     });
+    
 })
 
 /* app.get('/blog01.html',(req,res)=>{
