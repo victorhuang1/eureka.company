@@ -58,6 +58,14 @@ app.get('/:id',async(req,res)=>{
     
 })
 
+app.get('/:id',async(req,res)=>{
+    const blogpost= await BlogPost.findById(req.params.id)
+    res.render('blog01',{
+        blogpost
+    });
+    
+})
+
 /* app.get('/blog01.html',(req,res)=>{
     res.render('blog01')
 })
