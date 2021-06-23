@@ -181,8 +181,9 @@
 					<div class="modal-body list-group ">
 						<% for(var i=0;i<10;i++){ %>
 						<a href="<%=blogpost._id%>" class="list-group-item list-group-item-action">
-							<%= blogpost.title %><br>
-							<%=blogpost.body.substring(0,100)+'...'%>
+							<strong><%= blogpost.title %></strong><br>
+							<%=blogpost.body.substring(0,100)+'...'%><br>	
+							<p class='fw-lighter text-end'><%=blogpost.datePosted.toLocaleDateString()%></p>
 						</a>
 						<% } %>
 					</div>
