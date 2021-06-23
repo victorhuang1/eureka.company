@@ -171,40 +171,27 @@
 
 		<!-- search modal start-->
 		<!-- Modal -->
-		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLabel">Search Result</h5>
-				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		<div class="modal" id="exampleModal" tabindex="-1">
+			<div class="modal-dialog modal-dialog-scrollable">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="modalScrollableLabel">Search Result</h5>
+						<button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="modal"></button>
+					</div>
+					<div class="modal-body list-group ">
+						<% for(var i=0;i<10;i++){ %>
+						<a href="<%=blogpost._id%>" class="list-group-item list-group-item-action">
+							<%= blogpost.title %><br>
+							<%=blogpost.body.substring(0,100)+'...'%>
+						</a>
+						<% } %>
+					</div>
+					<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-bs-dismiss="modal">More Result</button>
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					<!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+					</div>
 				</div>
-				<div class="modal-body">
-					
-						<ul>
-							<% for(var i=0;i<2;i++){ %>
-								<li>
-									<a href="<%=blogpost._id%>" class='d-block text-decoration-none text-center'>
-										<h5>
-											<span class='fw-normal'> 
-												<%= blogpost.title %>
-											</span>
-										</h5>
-										<p class='fw-lighter'>
-											<%=blogpost.body.substring(0,50)+'...'%>
-										</p>
-									</a>
-								</li>
-							<hr>
-							<% } %>
-						</ul>
-					
-					
-				</div>
-				<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Save changes</button>
-				</div>
-			</div>
 			</div>
 		</div>
 		<!-- search modal end-->
