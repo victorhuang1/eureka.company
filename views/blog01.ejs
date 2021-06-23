@@ -178,17 +178,28 @@
 				<h5 class="modal-title" id="exampleModalLabel">Search Result</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
-				<!-- <div class="modal-body">
-					<div class='container'>
+				<div class="modal-body">
+					
 						<ul>
-							<li>
-								<div>Title</div>
-					            <div>Body</div>
-					            <div>Tag,Date</div>
-							</li>
+							<% for(var i=0;i<2;i++){ %>
+								<li>
+									<a href="<%=blogpost._id%>" class='d-block text-decoration-none text-center'>
+										<h5>
+											<span class='fw-normal'> 
+												<%= blogpost.title %>
+											</span>
+										</h5>
+										<p class='fw-lighter'>
+											<%=blogpost.body.substring(0,50)+'...'%>
+										</p>
+									</a>
+								</li>
+							<hr>
+							<% } %>
 						</ul>
-					</div>
-				</div> -->
+					
+					
+				</div>
 				<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 				<button type="button" class="btn btn-primary">Save changes</button>
