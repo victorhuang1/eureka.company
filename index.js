@@ -12,6 +12,7 @@ const ejs = require('ejs')
 
 const mongoose = require('mongoose');
 const BlogPost = require('./models/BlogPost');
+const Profolio = require('./models/Profolio')
 mongoose.connect('mongodb://localhost/my_database',{useNewParser:true})
 
 
