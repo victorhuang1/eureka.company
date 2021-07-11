@@ -12,7 +12,7 @@ const ejs = require('ejs')
 
 const mongoose = require('mongoose');
 const BlogPost = require('./models/BlogPost');
-const Profolio = require('./models/Profolio')
+const Portfolio = require('./models/Portfolio')
 mongoose.connect('mongodb://localhost/my_database',{useNewParser:true})
 
 
@@ -40,11 +40,13 @@ app.listen(3000,()=>{
 
 app.get('/',async(req,res)=>{
     const blogposts = await BlogPost.find({})
+    const portfolio = await Portfolio.find({})
     res.render('index',{
-        blogposts
+        blogposts:blogposts,
+        portfolio:portfolio
     });
 })
-
+        
 
 /* app.get('/',(req,res)=>{
     

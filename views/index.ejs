@@ -50,35 +50,35 @@
         </div>   
     </div>
 
-    <!-- profolio start -->
+    <!-- portfolio start -->
     <div class='container mt-5'>
-        <h3 id='pf'>Profolio</h3>
+        <h3 id='pf'>Portfolio</h3>
         <p class='fw-lighter mt-3'>A blog (a truncation of "weblog") is a discussion or informational website published on the World Wide Web consisting of discrete, often informal diary-style text entries (posts). Posts are typically displayed in reverse chronological order, so that the most recent post appears first, at the top of the web page. </p>
         <div class='row'>
             <% for(var i=0;i<2;i++){ %>
             <div class='col-12 col-md-6'>
                 <div class='shadow bg-white p-5 mb-4'>
-                    <a href="<%=blogposts[i]._id%>" class='d-block text-decoration-none text-center'>
-                        <img src='<%= blogposts[i].image %>' class='img-fluid rounded'>
+                    <div class='d-block text-decoration-none text-center'>
+                        <img src='<%= portfolio[i].image %>' class='img-fluid rounded'>
                         <h5 class='mt-4'>
                             <span class='text-secondaryellow fw-normal'> 
-                                <%= blogposts[i].title %>
+                                <%= portfolio[i].title %>
                             </span>
                         </h5>
                         <p class='fw-lighter'>
-                            <%=blogposts[i].body.substring(0,200)+'...'%>
+                            <%=portfolio[i].body.substring(0,200)+'...'%>
                         </p>
-                    </a>
+                    </div>
                     <div class="pt-5 d-flex justify-content-around">
-                        <a href="https://github.com/victorhuang1/myTestWeb" class="btn btn-primary">Code</a>    
-                        <a href="http://webofvictor.herokuapp.com/" class="btn btn-success">Demo</a>
+                        <a href="<%= portfolio[i].code %>" class="btn btn-primary" target="_blank">Code</a>    
+                        <a href="<%= portfolio[i].demo %>" class="btn btn-success" target="_blank">Demo</a>
                     </div>
                 </div>
             </div>  
             <% } %>
         </div>
     </div>
-    <!-- profolio end -->
+    <!-- portfolio end -->
 
     <!-- blog start -->
     <div class='container mt-5'>

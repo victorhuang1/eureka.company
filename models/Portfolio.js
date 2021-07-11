@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema;
 
-const ProfolioSchema = new Schema({
+const PortfolioSchema = new Schema({
     title:String,
     body:String,
     image:String,
@@ -10,6 +10,6 @@ const ProfolioSchema = new Schema({
     demo:String
 });
 
-const Profolio = mongoose.model('Profolio', ProfolioSchema);
+const Portfolio = mongoose.model('Portfolio', PortfolioSchema);
 
-module.exports = Profolio
+module.exports = Portfolio
