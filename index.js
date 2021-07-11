@@ -55,11 +55,17 @@ app.get('/',async(req,res)=>{
 
 app.get('/:_id',async(req,res)=>{
     const blogpost= await BlogPost.findById(req.params._id)
+    const recentBlogposts = await BlogPost.find({})
     res.render('blog01',{
-        blogpost
+        blogpost:blogpost,
+        recentBlogposts:recentBlogposts
     });
     
 })
+
+/* app.get('/search',async(req,res)=>{
+    const blogFilter = await BlogPost.find(req.params.)
+}) */
 
 /* app.get('/:id',async(req,res)=>{
     const blogpost= await BlogPost.findById(req.params.id)
