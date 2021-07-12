@@ -179,11 +179,11 @@
 						<button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="modal"></button>
 					</div>
 					<div class="modal-body list-group ">
-						<% for(var i=0;i<10;i++){ %>
-						<a href="<%=blogpost._id%>" class="list-group-item list-group-item-action">
-							<strong><%= blogpost.title %></strong><br>
-							<%=blogpost.body.substring(0,100)+'...'%><br>	
-							<p class='fw-lighter text-end'><%=blogpost.datePosted.toLocaleDateString()%></p>
+						<% for(var i=0;i<4;i++){ %>
+						<a href="<%= recentBlogposts[i]._id %>" class="list-group-item list-group-item-action">
+							<strong><%= recentBlogposts[i].title %></strong><br>
+							<%=recentBlogposts[i].body.substring(0,100)+'...'%><br>	
+							<p class='fw-lighter text-end'><%=recentBlogposts[i].datePosted.toLocaleDateString()%></p>
 						</a>
 						<% } %>
 					</div>

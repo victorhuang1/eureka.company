@@ -15,6 +15,7 @@ const BlogPost = require('./models/BlogPost');
 const Portfolio = require('./models/Portfolio')
 mongoose.connect('mongodb://localhost/my_database',{useNewParser:true})
 
+const searchGoogle = require('./searchGoogle');
 
 /* const server = http.createServer((req,res) => {
     if(req.url === '/about')
@@ -48,11 +49,6 @@ app.get('/',async(req,res)=>{
 })
         
 
-/* app.get('/',(req,res)=>{
-    
-    res.render('index')
-}) */
-
 app.get('/:_id',async(req,res)=>{
     const blogpost= await BlogPost.findById(req.params._id)
     const recentBlogposts = await BlogPost.find({})
@@ -63,24 +59,5 @@ app.get('/:_id',async(req,res)=>{
     
 })
 
-/* app.get('/search',async(req,res)=>{
-    const blogFilter = await BlogPost.find(req.params.)
-}) */
-
-/* app.get('/:id',async(req,res)=>{
-    const blogpost= await BlogPost.findById(req.params.id)
-    res.render('blog01',{
-        blogpost
-    });
-    
-}) */
-
-/* app.get('/blog01.html',(req,res)=>{
-    res.render('blog01')
-})
-*/
 
 
-/* app.get('/about',(req,res)=>{
-      res.sendFile(path.resolve(__dirname,'pages/about.html'))
-}) */
