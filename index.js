@@ -15,7 +15,7 @@ const BlogPost = require('./models/BlogPost');
 const Portfolio = require('./models/Portfolio')
 mongoose.connect('mongodb://localhost/my_database',{useNewParser:true})
 
-const searchGoogle = require('./searchGoogle');
+//const searchGoogle = require('./searchGoogle');
 
 /* const server = http.createServer((req,res) => {
     if(req.url === '/about')
@@ -58,6 +58,7 @@ app.get('/:_id',async(req,res)=>{
     });
     
 })
+
 
 
 
