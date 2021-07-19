@@ -12,7 +12,11 @@ const ejs = require('ejs')
 
 const mongoose = require('mongoose');
 const BlogPost = require('./models/BlogPost');
-const Portfolio = require('./models/Portfolio')
+const Portfolio = require('./models/Portfolio');
+const Mech = require('./models/Mech');
+const EAP = require('./models/EAP');
+
+//const { ESPIPE } = require('constants');
 mongoose.connect('mongodb://localhost/my_database',{useNewParser:true})
 
 //const searchGoogle = require('./searchGoogle');
@@ -45,6 +49,15 @@ app.get('/',async(req,res)=>{
     res.render('index',{
         blogposts:blogposts,
         portfolio:portfolio
+    });
+})
+
+app.get('/mech',async(req,res)=>{
+    const mech = await Mech.find({})
+    const eap = await EAP.find({})
+    res.render('mech',{
+        mech:mech,
+        eap:eap
     });
 })
         
