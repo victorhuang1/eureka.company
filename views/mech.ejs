@@ -94,7 +94,48 @@
                 </div>
             </div>
 
+            <!-- -->
             <div class='col-11'>
+                <% for(var j=0;j<mech.length;j++){ %>
+                <div class='row mb-5'>
+                    <div class='col-1'>
+                        <div class='shadow bg-white h-100'>
+                        <img src='<%= mech[j].companyLogo %>' class='img-fluid rounded'>
+                        <p class='company_one'><%= mech[j].companyName %></p>
+                        </div>
+                    </div>
+
+                    <div class='col-11'>
+                        <div class='shadow bg-white py-2'>
+                            <div class='ms-3 mt-2'>
+                                <h3><%= mech[j].jobTitle %></h3>
+                                <p class='fw-lighter mt-2'><%= mech[j].jobDescription %></p>
+                            </div>
+                            <% for(var i=0;i<mech[j].projectUrl.length;i++){ %>
+                            <div class='m-3 row'>
+                                <div class='col-3'>
+                                    <a href="<%= mech[j].projectUrl[i] %>" class='d-block text-decoration-none text-center' target='_blank'>
+                                        <img src='<%= mech[j].projectImage[i] %>' class='img-fluid rounded'>
+                                    </a>
+                                </div>
+                                <div class='col-9'>
+                                    <div class='text-secondaryellow fw-normal'> 
+                                        <%= mech[j].projectName[i] %>
+                                    </div>
+                                    <p class='fw-lighter'>
+                                        <%= mech[j].jobDescription %>
+                                    </p>
+                                </div>
+                            </div>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+
+            <% } %>    
+            </div>
+
+<!--             <div class='col-11'>
                 <div class='row mb-5'>
                     <div class='col-1'>
                         <div class='shadow bg-white h-100'>
@@ -109,10 +150,10 @@
                                 <h3><%= mech[0].jobTitle %></h3>
                                 <p class='fw-lighter mt-2'><%= mech[0].jobDescription %></p>
                             </div>
-                            <% for(var i=0;i<1;i++){ %>
+                            <% for(var i=0;i<mech[0].projectUrl.length;i++){ %>
                             <div class='m-3 row'>
                                 <div class='col-3'>
-                                    <a href="#" class='d-block text-decoration-none text-center'>
+                                    <a href="<%= mech[0].projectUrl[i] %>" class='d-block text-decoration-none text-center' target='_blank'>
                                         <img src='<%= mech[0].projectImage[i] %>' class='img-fluid rounded'>
                                     </a>
                                 </div>
@@ -145,10 +186,10 @@
                                 <h3><%= mech[2].jobTitle %></h3>
                                 <p class='fw-lighter mt-2'><%= mech[2].jobDescription %></p>
                             </div>
-                            <% for(var i=0;i<7;i++){ %>
+                            <% for(var i=0;i<mech[2].projectUrl.length;i++){ %>
                             <div class='m-3 row'>
                                 <div class='col-3'>
-                                    <a href="#" class='d-block text-decoration-none text-center'>
+                                    <a href="<%= mech[2].projectUrl[i] %>" class='d-block text-decoration-none text-center' target='_blank'>
                                         <img src='<%= mech[2].projectImage[i] %>' class='img-fluid rounded'>
                                     </a>
                                 </div>
@@ -180,10 +221,10 @@
                                 <h3><%= mech[1].jobTitle %></h3>
                                 <p class='fw-lighter mt-2'><%= mech[1].jobDescription %></p>
                             </div>
-                            <% for(var i=0;i<2;i++){ %>
+                            <% for(var i=0;i<mech[1].projectUrl.length;i++){ %>
                             <div class='m-3 row'>
                                 <div class='col-3'>
-                                    <a href="#" class='d-block text-decoration-none text-center'>
+                                    <a href="<%= mech[1].projectUrl[i] %>" class='d-block text-decoration-none text-center' target='_blank'>
                                         <img src='<%= mech[1].projectImage[i] %>' class='img-fluid rounded'>
                                     </a>
                                 </div>
@@ -201,7 +242,7 @@
                     </div>
                 </div>
 
-            </div>
+            </div> -->
 
     </div>
     </div>
