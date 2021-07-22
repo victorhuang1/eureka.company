@@ -1,12 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDejm4=" crossorigin="anonymous">
-    $(document).ready(function() {
-    var divHeight = $('.col-10').height(); 
-    $('.company_one').css('height', divHeight-100+'px');
-});  
-    </script> -->
+  
     <style>
     .timeline {
         background: blue;
@@ -21,55 +16,89 @@
     }
 
     .company_one {
-        background: red;
+        /* background: red; */
         font-weight:600;
         width:5px;
-        margin:auto;
+        /* margin:auto; */
         writing-mode: vertical-rl;
         transform: rotate(180deg);
         text-align: right;
     }
 
+    /* some sytle of banner and footer */
+    .text-secondaryellow{color:#a19975 ;}
+    .bg-blueblack{background:#161d27;}
+    .btn-secondaryyellow{background-color: #a19975;}
+    .shadow-image{box-shadow: -10px 10px 0 #a19975;}
+    .text-secondaryellow{color:#a19975 ;}
+
+
     </style>
+
+    <!-- header start -->  
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <link rel="icon" href="./image/80.png">
+    
+    <title>Welcome to my personal website</title>
+     <!-- header end -->  
   </head>
- 
-  <%- include('layouts/header');-%>
- 
+  
   <body class='bg-light'>
     
-    <%- include('layouts/navbar');-%>
+    <!-- navbar start -->  
+    <div class='container-fluid sticky-top px-0 shadow'>
+        <nav class='navbar navbar-expand-md navbar-dark bg-blueblack'>
+            <div class='container-fluid px-4'>
+                <a href="/" class="navbar-brand ms-4">Victor's Personal Website</a>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#slidernode">
+                    <span class='navbar-toggler-icon'></span>
+                </button>
+                <div class="collapse navbar-collapse" id="slidernode">
+                    <ul class="navbar-nav ms-auto me-4">
+                        <li class="navbar-item text-center"><a href="#cv" class="nav-link fw-lighter">CV</a></li>
+                        <li class="navbar-item text-center"><a href="#eap" class="nav-link fw-lighter">EAP</a></li>
+                        <li class="navbar-item text-center"><a href="#gy" class="nav-link fw-lighter">About</a></li>
+                        <li class="navbar-item text-center"><a href="#lx" class="nav-link fw-lighter">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>  
+    </div>
+    <!-- navbar end -->  
     
     <!-- banner -->
     <div class="container-fluid bg-blueblack">
         <div class='row'>
             <div class='col-12 col-md-6 text-white p-5 pb-0 pb-md-5'>
-                <h1>🚀Welcome to my planet!</h1>
-                <p class='fw-lighter'>Hi, my friend, I'm glad to meet you at my planet. Hope we can have a cup of coffee☕ together. Our conquest is the universe👽.</p>
+                <h1>Welcome to my personal website!</h1>
+                <p class='fw-lighter'>Hi, my friend, I'm glad to meet you here. Hope we can have a cup of coffee together.</p>
                 <ul class='list-unstyled d-flex'>
                     <li class='me-2'>Follow me</li>
                     <li class='me-2'>
-                        <a href='https://github.com/victorhuang1' target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-                            </svg>
+                        <a href='https://www.credly.com/users/yi-huang.043a569b' class='text-white' target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-award" viewBox="0 0 16 16">
+                                <path d="M9.669.864 8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68L9.669.864zm1.196 1.193.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702 1.509.229z"/>
+                                <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
+                              </svg>
                         </a>
                     </li>
                     <li class='me-2'>
-                        <a href='https://www.linkedin.com/in/victor-huang-3104681b6/'  class='text-white' target="_blank">
+                        <a href='https://www.linkedin.com/in/victor-h-09710571/' class='text-white' target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
                                 <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
                             </svg>
                         </a>
                     </li>
-                    <li>
-                        <a href='#' target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-                            </svg>
-                        </a>
-                    </li>
                 </ul>
-                <button class='btn btn-secondaryyellow d-flex align-items-center mt-5 btn-lg fs-6 fw-lighter mb-0 mb-md-5'>
+                <button class='btn btn-primary d-flex align-items-center mt-5 btn-lg fs-6 fw-lighter mb-0 mb-md-5' onclick="location.href='mailto:#.com';">
                     <svg class='me-2' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
                         <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
                     </svg>
@@ -85,7 +114,7 @@
 
     <!-- CV start -->
     <div class='container mt-5'>
-        <h3 id='bk'>Chronological</h3>
+        <h3 id='cv'>Chronological</h3>
         <p class='fw-lighter mt-3'>A blog (a truncation of "weblog") is a discussion or informational website published on the World Wide Web consisting of discrete, often informal diary-style text entries (posts). Posts are typically displayed in reverse chronological order, so that the most recent post appears first, at the top of the web page. </p>
         <div class='row'>
             <div class='col-1 mb-5'>
@@ -101,7 +130,7 @@
                     <div class='col-1'>
                         <div class='shadow bg-white h-100'>
                         <img src='<%= mech[j].companyLogo %>' class='img-fluid rounded'>
-                        <p class='company_one'><%= mech[j].companyName %></p>
+                        <div class='company_one'><%= mech[j].companyName %><br><%= mech[j].companyLoc %></div>
                         </div>
                     </div>
 
@@ -111,7 +140,7 @@
                                 <h3><%= mech[j].jobTitle %></h3>
                                 <p class='fw-lighter mt-2'><%= mech[j].jobDescription %></p>
                             </div>
-                            <% for(var i=0;i<mech[j].projectUrl.length;i++){ %>
+                            <% for(var i=0;i<mech[j].projectName.length;i++){ %>
                             <div class='m-3 row'>
                                 <div class='col-3'>
                                     <a href="<%= mech[j].projectUrl[i] %>" class='d-block text-decoration-none text-center' target='_blank'>
@@ -123,7 +152,7 @@
                                         <%= mech[j].projectName[i] %>
                                     </div>
                                     <p class='fw-lighter'>
-                                        <%= mech[j].jobDescription %>
+                                        <%= mech[j].jobDescription[i] %>
                                     </p>
                                 </div>
                             </div>
@@ -250,7 +279,7 @@
     <!-- EAP start -->
     <div class='container-fluid bg-white mb-5'>
         <div class='container'>
-            <h3 id='jn'>Awards and Honours</h3>
+            <h3 id='eap'>Educations, Awards and Honours, Publications</h3>
             <p class='fw-lighter mt-3'>A blog (a truncation of "weblog") is a discussion or informational website published on the World Wide Web consisting of discrete, often informal diary-style text entries (posts). Posts are typically displayed in reverse chronological order, so that the most recent post appears first, at the top of the web page. </p>
             <ul class='nav nav-tabs'>
                 <li class='nav-item'>
@@ -325,7 +354,7 @@
 
     <!-- about start -->
     <div class='container'>
-        <h3>About</h3>
+        <h3 id='gy'>About</h3>
         <p class='fw-lighter mt-3'>A blog (a truncation of "weblog") is a discussion or informational website published on the World Wide Web consisting of discrete, often informal diary-style text entries (posts). Posts are typically displayed in reverse chronological order, so that the most recent post appears first, at the top of the web page. </p>
         <div class='row shadow border p-5 my-5 bg-white'>
             <div class='col-md-3 col-12'>
@@ -421,7 +450,92 @@
     <!-- contact end -->
 
 
-    <%- include('layouts/footer');-%>
+    <!-- footer start -->
+    <div class='container-fluid bg-blueblack py-5'>
+        <div class='container'>
+            <div class='row'>
+                <div class='col-12 col-md-3 text-center text-sm-start'>
+                    <ul class="list-unstyled text-light">
+                        <li class='fw-bold mb-2'>Device support</li>
+                        <li class='fw-light'>
+                            <small>
+                                Web
+                            </small>
+                        </li>
+                        <li class='fw-light'>
+                            <small>
+                                Phone
+                            </small>
+                        </li>
+                        <li class='fw-light'>
+                            <small>
+                                Pad
+                            </small>
+                        </li>
+                    </ul>
+                </div>
+                <div class='col-12 col-md-3 text-center text-sm-start'>
+                    <ul class="list-unstyled text-light">
+                        <li class='fw-bold mb-2'>Module</li>
+                        <li class='fw-light'>
+                            <small>
+                                Blog
+                            </small>
+                        </li>
+                        <li class='fw-light'>
+                            <small>
+                                Skill
+                            </small>
+                        </li>
+                        <li class='fw-light'>
+                            <small>
+                                About
+                            </small>
+                        </li>
+                        <li class='fw-light'>
+                            <small>
+                                Call
+                            </small>
+                        </li>
+                    </ul>
+                </div>
+                <div class='col-12 col-md-3 text-center text-sm-start'>
+                    <ul class="list-unstyled text-light">
+                        <li class='fw-bold mb-2'>Support</li>
+                        <li class='fw-light'>
+                            <small>
+                                Web FrontEnd
+                            </small>
+                        </li>
+                        <li class='fw-light'>
+                            <small>
+                                PhotoShop
+                            </small>
+                        </li>
+                        <li class='fw-light'>
+                            <small>
+                                BootStrap 5
+                            </small>
+                        </li>
+                    </ul>
+                </div>
+                <div class='col-12 col-md-3 text-center text-sm-start'>
+                    <ul class="list-unstyled text-light">
+                        <li class='fw-bold mb-2'>Victor's Planet</li>
+                        <li class='fw-light'>
+                            <small>
+                                Victor's personal website.
+                            </small>
+                        </li>
+                    </ul>
+                </div>
+                <div class='col-12 text-center text-light mt-3'>
+                    <span>Victor © 1997-2021 Copyright</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer end -->
 
 
   </body>

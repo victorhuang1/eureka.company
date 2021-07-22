@@ -8,7 +8,7 @@ const MechSchema = new Schema({
     companyLogo:String,
     duration:String,
     jobTitle:String,
-    jobDescription:String,
+    jobDescription:Array,
     projectName:Array,
     projectUrl:Array,
     projectImage:Array
