@@ -117,7 +117,7 @@
         <h3 id='cv'>Chronological</h3>
         <p class='fw-lighter mt-3'>A blog (a truncation of "weblog") is a discussion or informational website published on the World Wide Web consisting of discrete, often informal diary-style text entries (posts). Posts are typically displayed in reverse chronological order, so that the most recent post appears first, at the top of the web page. </p>
         <div class='row'>
-            <div class='col-1 mb-5'>
+            <div class='col-1 d-none d-md-block mb-5'>
                 <div class='shadow bg-white h-100'>
                     <div class='timeline'>May the 4th be with you. Live long and prosper. Stay hungry, stay foolish.</div>
                 </div>
@@ -130,30 +130,35 @@
                     <div class='col-1'>
                         <div class='shadow bg-white h-100'>
                         <img src='<%= mech[j].companyLogo %>' class='img-fluid rounded'>
-                        <div class='company_one'><%= mech[j].companyName %><br><%= mech[j].companyLoc %></div>
+                        <div class='company_one'><%= mech[j].companyName %></div>
                         </div>
                     </div>
+
 
                     <div class='col-11'>
                         <div class='shadow bg-white py-2'>
                             <div class='ms-3 mt-2'>
                                 <h3><%= mech[j].jobTitle %></h3>
-                                <p class='fw-lighter mt-2'><%= mech[j].jobDescription %></p>
+                                <p class='fw-lighter mt-2 text-right'><%= mech[j].companyLoc +' '+ mech[j].duration %></p>
                             </div>
                             <% for(var i=0;i<mech[j].projectName.length;i++){ %>
                             <div class='m-3 row'>
-                                <div class='col-3'>
+                                <div class='col-lg-3 col-12'>
                                     <a href="<%= mech[j].projectUrl[i] %>" class='d-block text-decoration-none text-center' target='_blank'>
                                         <img src='<%= mech[j].projectImage[i] %>' class='img-fluid rounded'>
                                     </a>
                                 </div>
-                                <div class='col-9'>
-                                    <div class='text-secondaryellow fw-normal'> 
+                                <div class='col-lg-9 col-12'>
+                                    <div class='text-secondaryellow fw-normal text-wrap'  style='word-break: break-word'> 
                                         <%= mech[j].projectName[i] %>
                                     </div>
-                                    <p class='fw-lighter'>
-                                        <%= mech[j].jobDescription[i] %>
-                                    </p>
+                                    <ul class='text-wrap'>
+                                    <% for(var item of mech[j].jobDescription[i].split('&&')){ %>
+                                    <li class='fw-lighter' text-wrap'  style='word-break: break-word'>
+                                        <%= item %>
+                                    </li>
+                                    <% } %>
+                                </ul>
                                 </div>
                             </div>
                             <% } %>
