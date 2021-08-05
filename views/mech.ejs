@@ -106,7 +106,7 @@
                 </button>
             </div>
             <div class='col-12 col-md-6 d-flex justify-content-center align-items-center p-1 pt-0'>
-                <img class='h-75 img-thumbnail shadow-image' src='https://upload.wikimedia.org/wikipedia/en/5/51/Stormtrooper_%28Star_Wars%29.png'>
+                <img class='h-75 img-thumbnail shadow-image' src='<%= mech[1].projectImage[Math.floor(Math.random()*mech[1].projectName.length)] %>'>
             </div>
         </div>   
     </div>
@@ -114,12 +114,12 @@
 
     <!-- CV start -->
     <div class='container mt-5'>
-        <h3 id='cv'>Chronological</h3>
-        <p class='fw-lighter mt-3'>A blog (a truncation of "weblog") is a discussion or informational website published on the World Wide Web consisting of discrete, often informal diary-style text entries (posts). Posts are typically displayed in reverse chronological order, so that the most recent post appears first, at the top of the web page. </p>
+        <h3 id='cv'>CV</h3>
+        <p class='fw-lighter mt-3'>List some working experience, still under construction, try to be more detailed </p>
         <div class='row'>
             <div class='col-1 d-none d-md-block mb-5'>
                 <div class='shadow bg-white h-100'>
-                    <div class='timeline'>May the 4th be with you. Live long and prosper. Stay hungry, stay foolish.</div>
+                    <div class='timeline'>Stay hungry, stay foolish.</div>
                 </div>
             </div>
 
@@ -149,14 +149,15 @@
                                     </a>
                                 </div>
                                 <div class='col-lg-9 col-12'>
-                                    <div class='text-secondaryellow fw-normal text-wrap'  style='word-break: break-word'> 
+                                    <div class='text-secondaryellow fw-normal text-wrap text-break'> 
+                                    <!-- <div class='text-secondaryellow fw-normal text-wrap'  style='word-break: break-word'> --> 
                                         <%= mech[j].projectName[i] %>
                                     </div>
                                     <ul class='text-wrap'>
                                     <% for(var item of mech[j].jobDescription[i].split('&&')){ %>
-                                    <li class='fw-lighter' text-wrap'  style='word-break: break-word'>
+                                    <li class='fw-lighter text-wrap'  style='word-break: break-word'>
                                         <%= item %>
-                                    </li>
+                                    </li> 
                                     <% } %>
                                 </ul>
                                 </div>
@@ -285,7 +286,7 @@
     <div class='container-fluid bg-white mb-5'>
         <div class='container'>
             <h3 id='eap'>Educations, Awards and Honours, Publications</h3>
-            <p class='fw-lighter mt-3'>A blog (a truncation of "weblog") is a discussion or informational website published on the World Wide Web consisting of discrete, often informal diary-style text entries (posts). Posts are typically displayed in reverse chronological order, so that the most recent post appears first, at the top of the web page. </p>
+            <p class='fw-lighter mt-3'>List Educations, Awards and Honours, Publications</p>
             <ul class='nav nav-tabs'>
                 <li class='nav-item'>
                     <a href='#educations' data-bs-toggle="tab" class='nav-link active'>Educations</a>
@@ -360,24 +361,23 @@
     <!-- about start -->
     <div class='container'>
         <h3 id='gy'>About</h3>
-        <p class='fw-lighter mt-3'>A blog (a truncation of "weblog") is a discussion or informational website published on the World Wide Web consisting of discrete, often informal diary-style text entries (posts). Posts are typically displayed in reverse chronological order, so that the most recent post appears first, at the top of the web page. </p>
+        <p class='fw-lighter mt-3'>A brief introduction of Victor </p>
         <div class='row shadow border p-5 my-5 bg-white'>
             <div class='col-md-3 col-12'>
                 <div class='text-center'>
-                    <img src='https://upload.wikimedia.org/wikipedia/en/5/51/Stormtrooper_%28Star_Wars%29.png' class='rounded-3 img-fluid'>
+                    <img src='<%= mech[1].projectImage[Math.floor(Math.random()*mech[1].projectName.length)] %>'' class='rounded-3 img-fluid'>
                 </div>
                 <div class='mt-2'>
-                    <span class='badge bg-primary rounded-pill'>Front End Developer</span>
-                    <span class='badge bg-blueblack rounded-pill'>Back End Developer</span>
-                    <span class='badge bg-danger rounded-pill'>Full Stack Developer</span>
+                    <span class='badge bg-primary rounded-pill'>Ship Detail Designer</span>
+                    <span class='badge bg-blueblack rounded-pill'>Drafter</span>
+                    <span class='badge bg-danger rounded-pill'>Senior Mechanical Engineer</span>
                 </div>
             </div>
             <div class='col-md-9 col-12'>
                 <h3 class='text-center text-md-start mt-3 mt-md-0'>Victor</h3>
                 <hr class='mt-1 mb-2'>
                 <p class='fw-lighter'>
-                    August 25, 2012) was an American astronaut and aeronautical engineer, and the first person to walk on the Moon. He was also a naval aviator, test pilot, and university professor.</br>
-                    A graduate of Purdue University, Armstrong studied aeronautical engineering; his college tuition was paid for by the U.S. Navy under the Holloway Plan. He became a midshipman in 1949 and a naval aviator the following year. He saw action in the Korean War, flying the Grumman F9F Panther from the aircraft carrier USS Essex. In September 1951, while making a low bombing run, Armstrong's aircraft was damaged when it collided with an anti-aircraft cable, strung across a valley, which cut off a large portion of one wing. Armstrong was forced to bail out. After the war, he completed his bachelor's degree at Purdue and became a test pilot at the National Advisory Committee for Aeronautics (NACA) High-Speed Flight Station at Edwards Air Force Base in California. He was the project pilot on Century Series fighters and flew the North American X-15 seven times. He was also a participant in the U.S. Air Force's Man in Space Soonest and X-20 Dyna-Soar human spaceflight programs.
+                    Oper to work, willing to relocate, hold a class 5 driver's liscence with clean abstract
                 </p>
             </div>
         </div>
@@ -388,12 +388,11 @@
     <div class='container-fluid bg-white py-5'>
         <div class='container'>
             <h3 id='lx'>Contact</h3>
-            <p class='fw-lighter mt-3 mb-5'>A blog (a truncation of "weblog") is a discussion or informational website published on the World Wide Web consisting of discrete, often informal diary-style text entries (posts). Posts are typically displayed in reverse chronological order, so that the most recent post appears first, at the top of the web page. </p>
+            <p class='fw-lighter mt-3 mb-5'>Oper to work, willing to relocate, hold a class 5 driver's liscence with clean abstract </p>
             <div class='row'>
                 <div class='col-12 col-md-5 order-2 order-md-0 mt-4 mt-md-0'>
-                    <h5>Send a email</h5>
-                    <span class='fw-lighter'>A blog (a truncation of "weblog") is a discussion or informational website publis</span>
-                    
+                    <h5>Send a message</h5>
+                    <span class='fw-lighter'>This form is still under construction</span>  
                     <h5 class='mt-5'>Contact</h5>
                     <b>Email:</b>
                     <span class='fw-lighter'>victorhuang1
@@ -413,9 +412,10 @@
                 </div>
                
                 <div class='col-12 col-md-7 border shadow'>
+                    <form action="/submitForm" method="POST">
 					<div class='row p-5'>
 						<div class='col-12 d-block d-md-none mb-4'>
-							<h5>Send a email</h5>
+							<h5>Send a message</h5>
 							<span class='fw-light'>
 								Hello, nice to meet you here.
 							</span>
@@ -424,31 +424,33 @@
 							<label class='form-label fw-lighter' for='nameinput'>
 								First Name*
 							</label>
-							<input class='form-control' id='nameinput' placeholder="First Name*" />
+							<input class='form-control' id='nameinput' placeholder="First Name*" name="nameinput"/>
 							<label class='form-label fw-lighter mt-4' for='emailinput'>
 								Email:
 							</label>
-							<input class='form-control' id='emailinput' placeholder="Email:" />
+							<input class='form-control' id='emailinput' placeholder="Email:" name="emailinput"/>
 						</div>
 						<div class='col-6'>
 							<label class='form-label fw-lighter' for='lastinput'>
 								Last Name*:
 							</label>
-							<input class='form-control' id='lastinput' placeholder="Last Name*" />
+							<input class='form-control' id='lastinput' placeholder="Last Name*" name="lastinput"/>
 							<label class='form-label fw-lighter mt-4' for='phoneinput'>
 								Phone Number:
 							</label>
-							<input class='form-control' id='phoneinput' placeholder="Phone Number" />
+							<input class='form-control' id='phoneinput' placeholder="Phone Number" name="phoneinput"/>
 						</div>
 						<div class='col-12 mt-4'>
 							<label class='form-label fw-lighter' for='mesinput'>
 								Message:
 							</label>
-							<textarea class='form-control' id='mesinput'></textarea>
+							<textarea class='form-control' id='mesinput' name="mesinput"></textarea>
 							<input type='button' value='Send' class='btn btn-dark mt-4' />
 						</div>
 					</div>
+                    </form>
                 </div>
+
             </div>
         </div>  
     </div>
@@ -484,22 +486,22 @@
                         <li class='fw-bold mb-2'>Module</li>
                         <li class='fw-light'>
                             <small>
-                                Blog
+                                CV
                             </small>
                         </li>
                         <li class='fw-light'>
                             <small>
-                                Skill
+                                EAP
                             </small>
                         </li>
                         <li class='fw-light'>
                             <small>
-                                About
+                                About   
                             </small>
                         </li>
                         <li class='fw-light'>
                             <small>
-                                Call
+                                Contact
                             </small>
                         </li>
                     </ul>
@@ -509,17 +511,17 @@
                         <li class='fw-bold mb-2'>Support</li>
                         <li class='fw-light'>
                             <small>
-                                Web FrontEnd
-                            </small>
-                        </li>
-                        <li class='fw-light'>
-                            <small>
-                                PhotoShop
+                                NodeJS
                             </small>
                         </li>
                         <li class='fw-light'>
                             <small>
                                 BootStrap 5
+                            </small>
+                        </li>
+                        <li class='fw-light'>
+                            <small>
+                                HTML/CSS/JS
                             </small>
                         </li>
                     </ul>
